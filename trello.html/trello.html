@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Trello</title>
+    <link rel="stylesheet" href="trello.css">
+</head>
+<body>
+    <div class="container">
+        <div class="topo">
+            <input type="text" class="titulo-desejo" value="Nome da Demanda" />
+            <span class="emoji">✏️</span>
+        </div>
+        
+        <div class="linha">
+            <div class="texto-com-imagem">
+                <textarea class="texto-editavel" placeholder="Editar o texto"></textarea>
+                <div class="imagem" id="imagem1" onclick="document.getElementById('input-imagem1').click();">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de exemplo" />
+                    <input type="file" id="input-imagem1" style="display:none;" onchange="adicionarImagem(event, 'imagem1');" />
+                </div>
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="texto-com-imagem">
+                <textarea class="texto-editavel" placeholder="Editar o texto"></textarea>
+                <div class="imagem" id="imagem2" onclick="document.getElementById('input-imagem2').click();">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de exemplo" />
+                    <input type="file" id="input-imagem2" style="display:none;" onchange="adicionarImagem(event, 'imagem2');" />
+                </div>
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="comentario">
+                <div class="imagem" id="imagem3" onclick="document.getElementById('input-imagem3').click();">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de exemplo" />
+                    <input type="file" id="input-imagem3" style="display:none;" onchange="adicionarImagem(event, 'imagem3');" />
+                </div>
+                <textarea class="comentario-texto" placeholder="Deixe seu comentário..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function adicionarImagem(event, idImagem) {
+            const imagem = document.getElementById(idImagem).querySelector('img');
+            const file = event.target.files[0];
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                imagem.src = e.target.result; // Atualiza a imagem com o arquivo carregado
+            };
+            reader.readAsDataURL(file); // Lê o arquivo como URL de dados
+        }
+    </script>
+</body>
+</html>

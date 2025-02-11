@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Impede rolagem da página */
+}
+
+/* Contêiner principal */
+.container {
+    width: 70%; /* Reduzido para 70% da largura da tela */
+    max-width: 1200px; /* Máximo de largura, para evitar ficar grande demais em telas muito largas */
+    height: 80%; /* Definido para 80% da altura da tela */
+    background-color: white; /* Fundo branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    border: 2px solid black; /* Borda preta em torno do retângulo */
+}
+
+/* Estilo do topo */
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: black; /* Cor do texto preta */
+}
+
+.titulo-desejo {
+    font-size: 24px;
+    border: none;
+    background: transparent;
+    width: 70%;
+    text-align: center;
+    font-weight: bold;
+    color: black; /* Cor do texto preta */
+}
+
+.emoji {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Linha com texto e imagem */
+.linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.texto-com-imagem {
+    display: flex;
+    align-items: center;
+    width: 48%;
+}
+
+.texto-editavel {
+    width: 60%;
+    height: 100px;
+    font-size: 16px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black; /* Cor do texto preta */
+}
+
+.imagem {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid black; /* Borda preta para a área de imagem */
+}
+
+.imagem img {
+    width: 80%;
+    height: auto;
+}
+
+/* Estilo para a seção de comentários */
+.comentario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comentario .imagem {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid black; /* Borda preta para a imagem do comentário */
+}
+
+.comentario-texto {
+    width: 80%;
+    height: 100px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    color: black; /* Cor do texto preta */
+}
